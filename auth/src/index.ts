@@ -35,6 +35,10 @@ app.all('*', async(req, res) => {
 
 //connect to mongoose, creating a new mongo DB called 'auth'
 const start = async () => {
+    if (!process.env.JWT_KEY) {
+        throw new Error('JWT_KEY is undefined.');
+    }
+    
     try {
         await mongoose.connect('mongodb://auth-mongo-srv:27017/auth', {
             useNewUrlParser: true,
