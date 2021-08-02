@@ -1,5 +1,5 @@
 //connect to mongoose, creating a new mongo DB called 'auth'
-import * as mongoose from "mongoose";
+import mongoose from "mongoose";
 import {app} from "./app";
 
 const start = async () => {
