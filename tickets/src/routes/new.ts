@@ -1,7 +1,7 @@
 import express, {Request, Response} from "express";
-import {requireAuth} from "@mikeytickets/common";
+import {requireAuth, validateRequest} from "@mikeytickets/common";
 import {body} from "express-validator";
-import {validateRequest} from "../../../common";
+
 import {Ticket} from "../models/ticket";
 
 

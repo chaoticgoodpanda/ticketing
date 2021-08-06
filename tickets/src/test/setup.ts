@@ -45,7 +45,8 @@ afterAll(async () => {
 global.signin = () => {
     // Build a JSON web token payload. {id, email}
     const payload = {
-        id: 'dj289389djk',
+        // generates random id each time global.signin() function is called
+        id: new mongoose.Types.ObjectId().toHexString(),
         email: 'test@test.com'
     };
     
