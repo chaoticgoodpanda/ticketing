@@ -1,5 +1,7 @@
 import nats from 'node-nats-streaming';
 
+console.clear();
+
 // naming convention for "client" in NATS is stan (NATS backwards)
 const stan = nats.connect('ticketing', 'abc', {
     url: 'http://localhost:4222'
