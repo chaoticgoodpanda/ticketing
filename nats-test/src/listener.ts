@@ -1,23 +1,29 @@
-import nats, {Message} from 'node-nats-streaming';
+import nats from 'node-nats-streaming';
+import { randomBytes } from "crypto";
+import { TicketCreatedListener } from './events/ticket-created-listener';
 
 console.clear();
 
-const stan = nats.connect('ticketing', '123', {
+const stan = nats.connect('ticketing', randomBytes(4).toString('hex'), {
     url: 'http://localhost:4222'
 });
 
 stan.on('connect', () => {
     console.log('Listener connected to NATS.');
     
-    // object that we're going to listen to and receive data through this subscription
-    const subscription = stan.subscribe('ticket:created');
-    
-    // NATS refers to events as "messages" instead
-    subscription.on('message', (msg: Message) => {
-        const data = msg.getData();
-        
-        if(typeof data === 'string') {
-            console.log(`Received event #${msg.getSequence()}, with data: ${data}`);
-        }
+    // close connection immediately when we initiate a close
+    stan.on('close', () => {
+        console.log('NATS connection closed');
+        process.exit();
     });
+    
+    new TicketCreatedListener(stan).listen();
 });
+
+// process watching for interrupt signals
+process.on('SIGINT', () => stan.close());
+// process watching for terminate signals
+process.on('SIGTERM', () => stan.close());
+
+
+
