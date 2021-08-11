@@ -2,6 +2,8 @@ import express, {Request, Response} from "express";
 import {Ticket} from "../models/ticket";
 import {NotAuthorizedError, NotFoundError, requireAuth, validateRequest} from "@mikeytickets/common";
 import {body} from "express-validator";
+import {TicketUpdatedPublisher} from "../events/publishers/ticket-updated-publisher";
+import {natsWrapper} from "../nats-wrapper";
 
 
 const router = express.Router();
@@ -37,6 +39,14 @@ router.put(
     });
     
     await ticket.save();
+    
+    // no 'await' here because decision to save latency is more important since updating event is not seen as relevant to notify user
+    new TicketUpdatedPublisher(natsWrapper.client).publish({
+        id: ticket.id,
+        title: ticket.title,
+        price: ticket.price,
+        userId: ticket.userId
+    });
     
     res.send(ticket);
 });

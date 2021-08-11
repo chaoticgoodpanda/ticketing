@@ -4,9 +4,12 @@ import jwt from 'jsonwebtoken';
 import { app} from "../app";
 import request from "supertest";
 
+
 declare global {
     var signin: () => string[];
 }
+
+jest.mock('../nats-wrapper');
 
 let mongo: any;
 
@@ -25,6 +28,7 @@ beforeAll(async () => {
 
 //another hook run before each test
 beforeEach(async () => {
+    jest.clearAllMocks();
    const collections = await mongoose.connection.db.collections();
    
    //delete all data before each test
