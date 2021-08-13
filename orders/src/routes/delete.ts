@@ -1,6 +1,8 @@
 import express, {Request, Response} from "express";
 import {NotAuthorizedError, NotFoundError, requireAuth} from "@mikeytickets/common";
 import {Order, OrderStatus} from "../models/order";
+import {OrderCanceledPublisher} from "../events/publishers/order-canceled-publisher";
+import {natsWrapper} from "../nats-wrapper";
 
 
 const router = express.Router();
@@ -8,7 +10,8 @@ const router = express.Router();
 router.delete('/api/orders/:orderId', requireAuth, async (req: Request, res: Response) => {
     const { orderId } = req.params;
 
-    const order = await Order.findById(orderId);
+    // populate the ticket parameter when defining order
+    const order = await Order.findById(orderId).populate('ticket');
 
     if (!order) {
         throw new NotFoundError();
@@ -20,7 +23,12 @@ router.delete('/api/orders/:orderId', requireAuth, async (req: Request, res: Res
     await order.save();
 
     // publishing an event saying this order was canceled so the user knows about it
-
+    new OrderCanceledPublisher(natsWrapper.client).publish({
+       id: order.id,
+       ticket: {
+           id: order.ticket.id
+       }
+    });
 
     // 204 is status code for confirmed deletion
     res.status(204).send(order);
