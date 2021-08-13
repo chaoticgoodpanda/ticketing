@@ -48,7 +48,7 @@ ticketSchema.statics.build = (attrs: TicketAttrs) => {
 ticketSchema.methods.isReserved = async function() {
     // this === the ticket document we just called isReserved on
     const existingOrder = await Order.findOne({
-        ticket: this.id,
+        ticket: this as any,
         status: {
             $in: [
                 OrderStatus.Created,
