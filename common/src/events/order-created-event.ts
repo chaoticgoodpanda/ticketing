@@ -6,6 +6,7 @@ export interface OrderCreatedEvent {
     subject: Subjects.OrderCreated;
     data: {
         id: string;
+        version: number;
         status: OrderStatus;
         userId: string;
         // save as string instead of a Date because we're going to convert it into JSON
