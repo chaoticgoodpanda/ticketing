@@ -18,6 +18,7 @@ it('returns an error if ticket does not exist', async () => {
 
 it('returns an error if ticket is already reserved', async () => {
     const ticket = Ticket.build({
+        id: '41224d776a326fb40f000031',
         title: 'concert',
         price: 20
     });
@@ -39,6 +40,7 @@ it('returns an error if ticket is already reserved', async () => {
 
 it('reserves a ticket', async () => {
     const ticket = Ticket.build({
+        id: '41224d776a326fbf0f000001',
         title: 'concert',
         price: 20
     });
@@ -53,6 +55,7 @@ it('reserves a ticket', async () => {
 
 it('emit an order-created event', async () => {
     const ticket = Ticket.build({
+        id: '41224d776a326fc40f000001',
         title: 'concert',
         price: 20
     });

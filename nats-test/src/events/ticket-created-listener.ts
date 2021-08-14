@@ -6,7 +6,7 @@ import {Subjects} from "./subjects";
 export class TicketCreatedListener extends Listener<TicketCreatedEvent> {
     // setting type and initial value to Subjects.TicketCreated ensures that type can never be changed, which is what we want
     readonly subject = Subjects.TicketCreated;
-    queueGroupName = 'payments-service';
+    queueGroupName = 'orders-service';
 
     onMessage(data: TicketCreatedEvent['data'], msg: Message) {
         console.log('Event data!', data);

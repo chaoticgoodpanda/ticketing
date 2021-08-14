@@ -5,6 +5,7 @@ import {app} from "../../app";
 
 const buildTicket = async () => {
     const ticket = Ticket.build({
+        id: '41224d776a326fb40f500001',
         title: 'concert',
         price: 20
     });
