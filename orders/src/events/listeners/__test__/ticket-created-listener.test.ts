@@ -2,12 +2,13 @@ import { TicketCreatedEvent} from "@mikeytickets/common";
 import {TicketCreatedListener} from "../ticket-created-listener";
 import {natsWrapper} from "../../../nats-wrapper";
 import mongoose from "mongoose";
+import {Message} from "node-nats-streaming";
+import {Ticket} from "../../../models/ticket";
 
 const setup = async () => {
     // create an instance of the listener
     const listener = new TicketCreatedListener(natsWrapper.client);
 
-    // call the onMessage function with the data object + message object
     const data: TicketCreatedEvent['data'] = {
         version: 0,
         id: new mongoose.Types.ObjectId().toHexString(),
@@ -16,16 +17,36 @@ const setup = async () => {
         userId: new mongoose.Types.ObjectId().toHexString()
     };
 
-    // write assertions to make sure a ticket was created
+    // create a fake message object to get TypeScript to stop bugging us
+    // @ts-ignore
+    const msg: Message = {
+        ack: jest.fn()
+    };
+
+    return { listener, data, msg };
+
+
 };
 
 it('creates and saves a ticket', async () => {
+    const { listener, data, msg } = await setup();
 
+    // call the onMessage function with the data object + message object
+    await listener.onMessage(data, msg);
+
+    // write assertions to make sure a ticket was created
+    const ticket = await Ticket.findById(data.id);
+
+    expect(ticket).toBeDefined();
+    // bang operators because test above checks for whether there is a ticket
+    expect(ticket!.title).toEqual(data.title);
+    expect(ticket!.price).toEqual(data.price);
 });
 
 it('ack the message', async () => {
-
+    const { data, listener, msg } = await setup();
     // call the onMessage function with the data object + message object
-
+    await listener.onMessage(data, msg);
     // write assertions to make ack function is called
+    expect(msg.ack).toHaveBeenCalled();
 });
