@@ -14,8 +14,7 @@ export abstract class Listener<T extends Event> {
     abstract subject: T['subject'];
     abstract queueGroupName: string;
     abstract onMessage(data: T['data'], msg: Message): void;
-    // change from private to protected for use by different NATS listeners
-    protected client: Stan;
+    private client: Stan;
     protected ackWait = 5 * 1000;
 
     constructor(client: Stan) {
