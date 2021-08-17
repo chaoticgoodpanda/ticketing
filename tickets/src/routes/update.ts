@@ -1,6 +1,6 @@
 import express, {Request, Response} from "express";
 import {Ticket} from "../models/ticket";
-import {NotAuthorizedError, NotFoundError, requireAuth, validateRequest} from "@mikeytickets/common";
+import {BadRequestError, NotAuthorizedError, NotFoundError, requireAuth, validateRequest} from "@mikeytickets/common";
 import {body} from "express-validator";
 import {TicketUpdatedPublisher} from "../events/publishers/ticket-updated-publisher";
 import {natsWrapper} from "../nats-wrapper";
@@ -23,9 +23,15 @@ router.put(
     validateRequest,
     async (req: Request, res: Response) => {
     const ticket = await Ticket.findById(req.params.id);
-    
+
+    // sees if a ticket is actually there
     if(!ticket) {
         throw new NotFoundError();
+    }
+
+    // if ticket is already reserved, prevent edits/updating of ticket
+    if (ticket.orderId) {
+        throw new BadRequestError('Sorry, ticket has already been reserved. Cannot edit a reserved ticket.');
     }
     
     if(ticket.userId !== req.currentUser!.id) {

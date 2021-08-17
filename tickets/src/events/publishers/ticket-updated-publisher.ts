@@ -1,5 +1,4 @@
 import {Publisher, Subjects, TicketUpdatedEvent} from "@mikeytickets/common";
-import { natsWrapper } from "../../nats-wrapper";
 
 
 export class TicketUpdatedPublisher extends Publisher<TicketUpdatedEvent> {
@@ -7,6 +6,3 @@ export class TicketUpdatedPublisher extends Publisher<TicketUpdatedEvent> {
     
 }
 
-new TicketUpdatedPublisher(natsWrapper.client).publish({
-
-});
