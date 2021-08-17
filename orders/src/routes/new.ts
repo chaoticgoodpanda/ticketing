@@ -59,6 +59,8 @@ router.post('/api/orders', requireAuth, [
             version: order.version,
             status: order.status,
             userId: order.userId,
+            // this is when the order expires, when it expires we issue the expiry event
+            // from the Expiration service
             expiresAt: order.expiresAt.toISOString(),
             ticket: {
                 id: ticket.id,
