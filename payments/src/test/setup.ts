@@ -1,12 +1,10 @@
 import {MongoMemoryServer} from 'mongodb-memory-server';
 import mongoose from "mongoose";
 import jwt from 'jsonwebtoken';
-import { app} from "../app";
-import request from "supertest";
 
 
 declare global {
-    var signin: () => string[];
+    var signin: (id?: string) => string[];
 }
 
 jest.mock('../nats-wrapper');
@@ -46,11 +44,12 @@ afterAll(async () => {
 
 //helper function for signing up new user and assigning cookie so don't have to keep rewriting code
 //this is code refactoring
-global.signin = () => {
+// we can either provide a custom id as a string, or if we provide nothing, will auto-generate an id from mongoose
+global.signin = (id?: string) => {
     // Build a JSON web token payload. {id, email}
     const payload = {
         // generates random id each time global.signin() function is called
-        id: new mongoose.Types.ObjectId().toHexString(),
+        id: id || new mongoose.Types.ObjectId().toHexString(),
         email: 'test@test.com'
     };
     
