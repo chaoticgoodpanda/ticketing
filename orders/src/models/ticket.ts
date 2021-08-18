@@ -69,6 +69,8 @@ ticketSchema.methods.isReserved = async function() {
         ticket: this as any,
         status: {
             $in: [
+                // if a ticket doesn't have any of these properties,
+                // it's not isReserved and thus it's open again for buying
                 OrderStatus.Created,
                 OrderStatus.AwaitingPayment,
                 OrderStatus.Complete,
