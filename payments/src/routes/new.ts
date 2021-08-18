@@ -9,6 +9,10 @@ import {
 } from "@mikeytickets/common";
 import {body} from "express-validator";
 import {Order} from "../models/order";
+import {stripe} from "../stripe";
+import {Payment} from "../models/payment";
+import {PaymentCreatedPublisher} from "../events/publishers/payment-created-publisher";
+import {natsWrapper} from "../nats-wrapper";
 
 
 
@@ -43,7 +47,28 @@ router.post('/api/payments',
             throw new BadRequestError('Cannot pay for a canceled order.');
         }
 
-        res.send({ success: true });
+        // engage with Stripe
+        const charge = await stripe.charges.create({
+            currency: 'usd',
+            // dollar value we convert into cents by multiplying by 100 as required by Stripe docs
+            amount: order.price * 100,
+            source: token,
+        });
+        const payment = Payment.build({
+            orderId,
+            stripeId: charge.id,
+            version: 0
+        });
+        await payment.save();
+        
+        new PaymentCreatedPublisher(natsWrapper.client).publish({
+            id: payment.id,
+            orderId: payment.orderId,
+            stripeId: payment.stripeId,
+            version: payment.version
+        });
+
+        res.status(201).send({ id: payment.id });
 });
 
 
