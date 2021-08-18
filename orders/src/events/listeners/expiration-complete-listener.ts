@@ -17,6 +17,11 @@ export class ExpirationCompleteListener extends Listener<ExpirationCompleteEvent
             throw new Error('Order not found');
         }
 
+        // make sure we don't cancel a paid-for order!
+        if (order.status === OrderStatus.Complete) {
+            return msg.ack();
+        }
+
         order.set({
             // we don't need to clear out ticket as ticket: null due to the isReserved property we created in ticket.ts
             // this code line should only run when the order has NOT been paid for
