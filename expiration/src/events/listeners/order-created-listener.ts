@@ -20,7 +20,7 @@ export class OrderCreatedListener extends Listener<OrderCreatedEvent> {
             // put in delay that is added in before we receive this job back
             // from the expiration queue to be processed
             // 10000 = 10 seconds in milliseconds
-            delay
+            delay: 10000
         });
 
         msg.ack();

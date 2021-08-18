@@ -19,6 +19,7 @@ export class ExpirationCompleteListener extends Listener<ExpirationCompleteEvent
 
         order.set({
             // we don't need to clear out ticket as ticket: null due to the isReserved property we created in ticket.ts
+            // this code line should only run when the order has NOT been paid for
             status: OrderStatus.Canceled,
         });
         await order.save();
@@ -26,7 +27,7 @@ export class ExpirationCompleteListener extends Listener<ExpirationCompleteEvent
         // create new order canceled publisher, pass in this listener's NATS client
         // publish function and reference to ticket this order was associated with
         // to let other services know we have canceled the order b/c it expired
-        new OrderCanceledPublisher(this.client).publish({
+        await new OrderCanceledPublisher(this.client).publish({
             id: order.id,
             version: order.version,
             ticket: {
