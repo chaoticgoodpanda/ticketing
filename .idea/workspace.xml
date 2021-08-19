@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80c5a76e-ca59-4df0-9743-cfea5cc026e1" name="Changes" comment="Completed payment-created-listener.ts and edited expiration-complete-listener.ts so can't cancel paid-for orders" />
+    <list default="true" id="b997dfc1-3a9c-401b-b19c-f359ac67b1b9" name="Changes" comment="Completed payment-created-listener.ts and edited expiration-complete-listener.ts so can't cancel paid-for orders">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +12,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ts.external.directory.path" value="D:\Dropbox\hackerz\ticketing\payments\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/common/node_modules/typescript/lib" />
   </component>
   <component name="TaskManager">
     <servers />
@@ -30,5 +35,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added tests to other packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests to other packages" />
   </component>
 </project>
