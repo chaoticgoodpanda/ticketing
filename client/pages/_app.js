@@ -1,14 +1,17 @@
 //wiring up bootstrap for global loading on every single page a user sees in our app
 import 'bootstrap/dist/css/bootstrap.css';
-import {Component} from "react";
 import buildClient from "../api/build-client";
 import Header from "../components/header";
 
 const AppComponent = ({Component, pageProps, currentUser}) => {
-    return <div>
-        <Header currentUser={currentUser} />
-        <Component {...pageProps} />;
+    return (
+        <div>
+            <Header currentUser={currentUser} />
+            <div className='container'>
+                <Component currentUser={currentUser} {...pageProps} />
+        </div>
     </div>
+    );
 };
 
 AppComponent.getInitialProps = async (appContext) => {
@@ -18,10 +21,13 @@ AppComponent.getInitialProps = async (appContext) => {
     let pageProps = {};
     if (appContext.Component.getInitialProps) {
         // the set of data we are trying to fetch from individual pages (components) props
-        pageProps = await appContext.Component.getInitialProps(appContext.ctx);
+        pageProps = await appContext.Component.getInitialProps(
+            appContext.ctx,
+            client,
+            data.currentUser);
     }
 
-    console.log(pageProps);
+
     return {
         pageProps,
         ...data

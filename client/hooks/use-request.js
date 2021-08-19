@@ -4,10 +4,11 @@ import { useState } from 'react';
 export default function useRequestHook({url, method, body, onSuccess }) {
     const [errors, setErrors] = useState(null);
     
-    const doRequest = async () => {
+    const doRequest = async (props = {}) => {
         try {
             setErrors(null);
-            const response = await axios[method](url, body);
+            const response = await axios[method](url,
+                { ...body, ...props });
             
             if (onSuccess) {
                 onSuccess(response.data);
