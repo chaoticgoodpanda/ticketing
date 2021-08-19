@@ -1,28 +1,48 @@
-import buildClient from "../api/build-client";
+import Link from 'next/link';
 
-// need to use axios to fetch data from getInitialProps
-const LandingPage = ({ currentUser }) => {
-    // console.log(currentUser);
-    // axios.get('/api/users/currentuser').catch((err) => {
-    //     console.log(err.message);
-    // });
-    return currentUser ? (
-        <h1>You are signed in!</h1>)
-        : (
-            <h1>You are NOT signed in.</h1>);
+const LandingPage = ({ currentUser, tickets }) => {
+    const ticketList = tickets.map(ticket => {
+        return (
+            <tr key={ticket.id}>
+                <td>{ticket.title}</td>
+                <td>{ticket.price}</td>
+                <td>
+                    <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
+                        <a>View</a>
+                    </Link>
+                </td>
+            </tr>
+        )
+    })
+
+    return (
+        <div>
+            <h1>Tickets</h1>
+            <table className='table'>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {ticketList}
+                </tbody>
+            </table>
+        </div>
+    )
 };
 
 // this is not a component, it is a plain function
 // not allowed to fetch data from a component during the initial SSR
 // first part of data pulled typically called "context"
-LandingPage.getInitialProps = async (context) => {
-    console.log('LANDING PAGE!');
-    // executing props for appComponent
-    const client = buildClient(context);
-    const { data } = await client.get('/api/users/currentuser');
+LandingPage.getInitialProps = async (context, client, currentUser) => {
+    const { data } = await client.get('/api/tickets');
 
-    return data;
-    
+    // everything inside of here is going to be emerged into Props
+    // as an array of all tickets fetched inside API
+    return { tickets: data };
 };
 
 export default LandingPage;

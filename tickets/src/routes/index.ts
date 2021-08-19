@@ -6,7 +6,9 @@ const router = express.Router();
 
 router.get('/api/tickets', async (req: Request, res: Response) => {
     // empty object returns all tickets inside collection
-    const tickets = await Ticket.find({});
+    const tickets = await Ticket.find({
+        orderId: undefined
+    });
     
     res.send(tickets);
     
