@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: client
-          image: us.gcr.io/ticketing-dev-320907/client
+          image: koekoe/client
+          imagePullPolicy: Always
 
 ---
 apiVersion: v1
