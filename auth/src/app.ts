@@ -19,7 +19,8 @@ app.use(
         signed: false,
         //requires user to be on HTTPS connection
         //change to 'false' IF we are in a test environment (and reset later for prod)
-        secure: process.env.NODE_ENV !== 'test'
+        // secure: process.env.NODE_ENV !== 'test'
+        secure: false
     })
 );
 

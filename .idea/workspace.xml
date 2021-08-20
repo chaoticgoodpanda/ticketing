@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Changed ingress settings">
+    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Commented out blocko in user.ts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/models/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/auth/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/auth/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/build-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/build-client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/orders/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/payments/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/src/app.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629491973626</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Commented out blocko in user.ts">
+      <created>1629493979730</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1629493979730</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +259,7 @@
     <MESSAGE value="Updated to trigger Github Actions" />
     <MESSAGE value="Set up nginx exception for domain and changed build-client to point at website" />
     <MESSAGE value="Changed ingress settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed ingress settings" />
+    <MESSAGE value="Commented out blocko in user.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented out blocko in user.ts" />
   </component>
 </project>
