@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Set up nginx exception for domain and changed build-client to point at website">
+    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Changed ingress settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/auth/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/auth/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629490545019</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Changed ingress settings">
+      <created>1629491973626</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1629491973626</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +249,7 @@
     <MESSAGE value="Created yaml for all other directories + changed depl from GCP to Docker Hub koekoe/" />
     <MESSAGE value="Updated to trigger Github Actions" />
     <MESSAGE value="Set up nginx exception for domain and changed build-client to point at website" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up nginx exception for domain and changed build-client to point at website" />
+    <MESSAGE value="Changed ingress settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed ingress settings" />
   </component>
 </project>
