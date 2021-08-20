@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b997dfc1-3a9c-401b-b19c-f359ac67b1b9" name="Changes" comment="Changed yaml to only run tests on CI/CD if files in each directory have been changed">
+    <list default="true" id="b997dfc1-3a9c-401b-b19c-f359ac67b1b9" name="Changes" comment="Fixed update.ts test and workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +57,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629455527470</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added deploy-auth">
+      <created>1629461797037</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629461797037</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Edited auth index.ts">
+      <created>1629461929064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629461929064</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +93,8 @@
     <MESSAGE value="Added tests to other packages" />
     <MESSAGE value="Fixed update.ts test and workspace.xml" />
     <MESSAGE value="Changed yaml to only run tests on CI/CD if files in each directory have been changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed yaml to only run tests on CI/CD if files in each directory have been changed" />
+    <MESSAGE value="Added deploy-auth" />
+    <MESSAGE value="Edited auth index.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited auth index.ts" />
   </component>
 </project>
