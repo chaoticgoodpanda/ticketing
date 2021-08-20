@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Updated">
+    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Updated to trigger Github Actions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/expiration/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/expiration/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/orders/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/payments/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/build-client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/build-client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +14,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
@@ -29,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -177,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629484739697</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated to trigger Github Actions">
+      <created>1629485085113</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1629485085113</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +210,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added tests to other packages" />
     <MESSAGE value="Fixed update.ts test and workspace.xml" />
     <MESSAGE value="Changed yaml to only run tests on CI/CD if files in each directory have been changed" />
@@ -209,6 +224,7 @@
     <MESSAGE value="changed imagepullpolicy to always" />
     <MESSAGE value="Changed Skaffold to Docker Hub" />
     <MESSAGE value="Created yaml for all other directories + changed depl from GCP to Docker Hub koekoe/" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created yaml for all other directories + changed depl from GCP to Docker Hub koekoe/" />
+    <MESSAGE value="Updated to trigger Github Actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated to trigger Github Actions" />
   </component>
 </project>
