@@ -15,7 +15,7 @@ export default function SignUp() {
         onSuccess: () => Router.push('/')
     });
     
-    const onSubmit = async (event) => {
+    const onSubmit = async event => {
         event.preventDefault();
 
         await doRequest();
