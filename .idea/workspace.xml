@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b997dfc1-3a9c-401b-b19c-f359ac67b1b9" name="Changes" comment="added deploy-manifests.yaml">
-      <change afterPath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" afterDir="false" />
+    <list default="true" id="b997dfc1-3a9c-401b-b19c-f359ac67b1b9" name="Changes" comment="created k8s-prod, k8s-dev folders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/k8s/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" afterDir="false" />
     </list>
-    <list id="4b9eeda2-620b-4ce3-80f7-5c9dad2b6627" name="Changes by micha" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-manifests.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-manifests.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
-    </list>
+    <list id="4b9eeda2-620b-4ce3-80f7-5c9dad2b6627" name="Changes by micha" comment="Changes by micha" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629467271368</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="created k8s-prod, k8s-dev folders">
+      <created>1629468109111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629468109111</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes by micha">
+      <created>1629468130308</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629468130308</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +127,8 @@
     <MESSAGE value="Added deploy-auth" />
     <MESSAGE value="Edited auth index.ts" />
     <MESSAGE value="added deploy-manifests.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added deploy-manifests.yaml" />
+    <MESSAGE value="created k8s-prod, k8s-dev folders" />
+    <MESSAGE value="Changes by micha" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by micha" />
   </component>
 </project>
