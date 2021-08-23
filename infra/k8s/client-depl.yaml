@@ -15,8 +15,6 @@ spec:
       containers:
         - name: client
           image: koekoe/client
-          imagePullPolicy: Always
-
 ---
 apiVersion: v1
 kind: Service

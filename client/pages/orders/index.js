@@ -1,11 +1,15 @@
+import {List} from "semantic-ui-react";
+
 const OrderIndex = ({orders}) => {
     return (
         <ul>
             {orders.map((order) => {
                 return  (
-                    <li key={order.id}>
-                    {order.ticket.title} - {order.status}
-                </li>
+                    <List>
+                        <List.Item>{order.id}</List.Item>
+                        <List.Item>{order.ticket.title}</List.Item>
+                        <List.Item>{order.status}</List.Item>
+                    </List>
             );
             })}
         </ul>

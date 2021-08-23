@@ -7,7 +7,7 @@ export default function buildClient({ req }) {
         
         return axios.create({
            baseURL: 'http://www.nug-lottery-global.xyz',
-           headers: req.headers 
+           headers: req.headers
         });
     } else {
         // We are on the browser

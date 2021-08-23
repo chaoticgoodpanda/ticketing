@@ -6,11 +6,11 @@ import Header from "../components/header";
 const AppComponent = ({Component, pageProps, currentUser}) => {
     return (
         <div>
-            <Header currentUser={currentUser} />
+            <Header as='h2' icon='create-ticket' currentUser={currentUser} />
             <div className='container'>
                 <Component currentUser={currentUser} {...pageProps} />
+            </div>
         </div>
-    </div>
     );
 };
 

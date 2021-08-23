@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Changed ingress-dev back to include k8s setup" />
+    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Turned off imagePullPolicy: Always in yaml files">
+      <change afterPath="$PROJECT_DIR$/skaffold" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-auth.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-auth.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-client.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-client.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-expiration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-expiration.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-orders.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-orders.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy-tickets.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy-tickets.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s/client-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/client-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s/expiration-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/expiration-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s/tickets-depl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s/tickets-depl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skaffold.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +79,8 @@
       <workItem from="1629444564975" duration="145000" />
       <workItem from="1629454746804" duration="598000" />
       <workItem from="1629476315964" duration="573000" />
-      <workItem from="1629714677897" duration="3010000" />
+      <workItem from="1629721122829" duration="21000" />
+      <workItem from="1629721165648" duration="232000" />
     </task>
     <task id="LOCAL-00002" summary="Changed yaml to only run tests on CI/CD if files in each directory have been changed">
       <created>1629455527470</created>
@@ -223,28 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629496502303</updated>
     </task>
-    <task id="LOCAL-00024" summary="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client">
-      <created>1629722367284</created>
+    <task id="LOCAL-00024" summary="Turned off imagePullPolicy: Always in yaml files">
+      <created>1629740268996</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1629722367284</updated>
+      <updated>1629740268996</updated>
     </task>
-    <task id="LOCAL-00025" summary="Changed ingress-dev back to include k8s setup">
-      <created>1629727207867</created>
+    <task id="LOCAL-00025" summary="Turned off imagePullPolicy: Always in yaml files">
+      <created>1629742871418</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1629727207867</updated>
+      <updated>1629742871418</updated>
     </task>
-    <task id="LOCAL-00026" summary="Changed ingress-dev back to include k8s setup">
-      <created>1629727245074</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1629727245074</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,8 +288,7 @@
     <MESSAGE value="Changed ingress settings" />
     <MESSAGE value="Commented out blocko in user.ts" />
     <MESSAGE value="Changed secure: false" />
-    <MESSAGE value="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client" />
-    <MESSAGE value="Changed ingress-dev back to include k8s setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed ingress-dev back to include k8s setup" />
+    <MESSAGE value="Turned off imagePullPolicy: Always in yaml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Turned off imagePullPolicy: Always in yaml files" />
   </component>
 </project>

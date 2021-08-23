@@ -40,7 +40,7 @@ const OrderShow = ({ order, currentUser }) => {
 
     return (
         <div>
-        Time left to pay: {timeLeft} seconds
+        Time left to pay: {timeLeft} seconds<br />
         <StripeCheckout
             token={({ id }) => doRequest({token: id})}
             // this is the Stripe publishable key, not secret key
