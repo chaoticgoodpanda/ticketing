@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Changed ingress-dev back to include k8s setup">
-      <change afterPath="$PROJECT_DIR$/client/public/create-ticket.ico" afterDir="false" />
+    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/infra/k8s-prod" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/common/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -72,7 +72,7 @@
       <workItem from="1629444564975" duration="145000" />
       <workItem from="1629454746804" duration="598000" />
       <workItem from="1629476315964" duration="573000" />
-      <workItem from="1629714677897" duration="4783000" />
+      <workItem from="1629714677897" duration="2861000" />
     </task>
     <task id="LOCAL-00002" summary="Changed yaml to only run tests on CI/CD if files in each directory have been changed">
       <created>1629455527470</created>
@@ -235,28 +235,7 @@
       <option name="project" value="LOCAL" />
       <updated>1629722367284</updated>
     </task>
-    <task id="LOCAL-00025" summary="Changed ingress-dev back to include k8s setup">
-      <created>1629727207867</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1629727207867</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Changed ingress-dev back to include k8s setup">
-      <created>1629727245074</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1629727245074</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Changed ingress-dev back to include k8s setup">
-      <created>1629727388382</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1629727388382</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +274,6 @@
     <MESSAGE value="Commented out blocko in user.ts" />
     <MESSAGE value="Changed secure: false" />
     <MESSAGE value="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client" />
-    <MESSAGE value="Changed ingress-dev back to include k8s setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed ingress-dev back to include k8s setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client" />
   </component>
 </project>

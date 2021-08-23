@@ -6,7 +6,7 @@ export default function buildClient({ req }) {
         // We are on the server
         
         return axios.create({
-           baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/',
+           baseURL: 'http://www.nug-lottery-global.xyz',
            headers: req.headers 
         });
     } else {
