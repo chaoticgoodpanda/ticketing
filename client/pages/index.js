@@ -14,13 +14,13 @@ const LandingPage = ({ currentUser, tickets }) => {
 
     return (
         <div>
-            <h1>Tickets</h1>
+            <h1>Tickets for Sale!</h1>
             <table className='table'>
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Link</th>
+                        <th>Name of Ticket</th>
+                        <th>Unit Price</th>
+                        <th>Click to Buy</th>
                     </tr>
                 </thead>
                 <tbody>
