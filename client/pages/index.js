@@ -1,23 +1,20 @@
 import Link from 'next/link';
+import {List} from 'semantic-ui-css/semantic.min.css';
 
 const LandingPage = ({ currentUser, tickets }) => {
     const ticketList = tickets.map(ticket => {
         return (
-            <tr key={ticket.id}>
-                <td>{ticket.title}</td>
-                <td>{ticket.price}</td>
-                <td>
-                    <Link href="/tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
-                        <a>View</a>
-                    </Link>
-                </td>
-            </tr>
-        )
+            <List>
+                <List.Item>{ticket.id}</List.Item>
+                <List.Item>{ticket.title}</List.Item>
+                <List.Item>{ticket.price}</List.Item>
+            </List>
+            )
     })
 
     return (
         <div>
-            <h2>Tickets</h2>
+            <h1>Tickets Yummy</h1>
             <table className='table'>
                 <thead>
                     <tr>
