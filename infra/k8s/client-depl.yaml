@@ -15,7 +15,6 @@ spec:
       containers:
         - name: client
           image: koekoe/client
-
 ---
 apiVersion: v1
 kind: Service
