@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client">
+    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="HTML design changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-dev/ingress-srv.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/infra/k8s-prod/ingress-srv.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +45,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/infra/k8s-prod" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -235,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629722367284</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="HTML design changes">
+      <created>1629733034636</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1629733034636</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +279,7 @@
     <MESSAGE value="Commented out blocko in user.ts" />
     <MESSAGE value="Changed secure: false" />
     <MESSAGE value="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed ingress-dev to work for ticketing.dev and added Semantic UI to client" />
+    <MESSAGE value="HTML design changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="HTML design changes" />
   </component>
 </project>
