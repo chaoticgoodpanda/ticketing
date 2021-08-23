@@ -1,8 +1,14 @@
 import Link from 'next/link';
+import {List} from 'semantic-ui-css/semantic.min.css';
 
 const LandingPage = ({ currentUser, tickets }) => {
     const ticketList = tickets.map(ticket => {
         return (
+            <List>
+                <List.Item>{ticket.id}</List.Item>
+                <List.Item>{ticket.title}</List.Item>
+                <List.Item>{ticket.price}</List.Item>
+            </List>
             <tr key={ticket.id}>
                 <td>{ticket.title}</td>
                 <td>{ticket.price}</td>
