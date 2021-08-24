@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: auth
-          image: us.gcr.io/ticketing-dev-320907/auth
-          imagePullPolicy: Always
+          image: koekoe/auth
+          imagePullPolicy: Never
           env: 
             - name: MONGO_URI
               value: 'mongodb://auth-mongo-srv:27017/auth'
