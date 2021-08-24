@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="Change to GCP setup from Digital Ocean">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b997dfc1-3a9c-401b-b19c-f359ac67b1b9" name="Changes" comment="Changed Skaffold to Docker Hub" />
+    <list id="80b73a5c-2c71-4f8c-9d9f-c89a0738bf92" name="Changes by micha" comment="">
+      <change beforePath="$PROJECT_DIR$/auth/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,112 +158,7 @@
       <option name="project" value="LOCAL" />
       <updated>1629480065716</updated>
     </task>
-    <task id="LOCAL-00014" summary="Changed Skaffold to Docker Hub">
-      <created>1629480982413</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1629480982413</updated>
-    </task>
-    <task id="LOCAL-00015" summary="changed imagepullpolicy to always">
-      <created>1629483947302</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1629483947302</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Changed Skaffold to Docker Hub">
-      <created>1629483958902</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1629483958902</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Created yaml for all other directories + changed depl from GCP to Docker Hub koekoe/">
-      <created>1629484739697</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1629484739697</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Updated to trigger Github Actions">
-      <created>1629485085113</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1629485085113</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Set up nginx exception for domain and changed build-client to point at website">
-      <created>1629490517708</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1629490517708</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Set up nginx exception for domain and changed build-client to point at website">
-      <created>1629490545019</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1629490545019</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Changed ingress settings">
-      <created>1629491973626</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1629491973626</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Commented out blocko in user.ts">
-      <created>1629493979730</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1629493979730</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Changed secure: false">
-      <created>1629496502303</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1629496502303</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Turned off imagePullPolicy: Always in yaml files">
-      <created>1629740268996</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1629740268996</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Turned off imagePullPolicy: Always in yaml files">
-      <created>1629742871418</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1629742871418</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Minor changes to views to test Kubectl">
-      <created>1629746667427</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1629746667427</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Deleted ingress integration with k8s-dev">
-      <created>1629746910398</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1629746910398</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Change to GCP setup from Digital Ocean">
-      <created>1629793182173</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1629793182173</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
