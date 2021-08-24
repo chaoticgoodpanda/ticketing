@@ -6,10 +6,10 @@ deploy:
       - ./infra/k8s/*
       - ./infra/k8s-dev/*
 build:
-  local:
-    push: false
-#  googleCloudBuild:
-#    projectId: ticketing-dev-320907
+#  local:
+#    push: false
+  googleCloudBuild:
+    projectId: ticketing-dev-320907
   artifacts:
     - image: koekoe/auth
       context: auth

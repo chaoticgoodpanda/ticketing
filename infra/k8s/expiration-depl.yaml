@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: expiration
-          image: koekoe/expiration
+          image: us.gcr.io/ticketing-dev-320907/expiration
           imagePullPolicy: Always
           env:
             - name: NATS_CLIENT_ID

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: koekoe/client
+          image: us.gcr.io/ticketing-dev-320907/client
 ---
 apiVersion: v1
 kind: Service
