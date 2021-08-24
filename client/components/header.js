@@ -11,18 +11,15 @@ export default function Header ({currentUser}) {
     ]
         .filter(linkConfig => linkConfig)
         .map(({ label, href }) => {
-        return ( 
-            <li key={href} className='nav-item' >
+        return <li key={href} className='nav-item' >
             <Link href={href}>
                 <a className='nav-link'>{label}</a> 
             </Link>
         </li>
-        );
     });
     
     
-    return ( 
-        <nav className="navbar navbar-light bg-light">
+    return <nav className="navbar navbar-light bg-light">
         <Link href='/'>
             <a className='navbar-brand'>Get Tickets</a>
         </Link>
@@ -33,5 +30,4 @@ export default function Header ({currentUser}) {
             </ul>
         </div>
     </nav>
-    );
 };
